@@ -1,33 +1,28 @@
+import java.util.Scanner;
 
-/**
- * Escreva uma descrição da classe Main1012 aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
- */
 public class Main1012
 {
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
-
-    /**
-     * Construtor para objetos da classe Main1012
-     */
-    public Main1012()
+    private Main1012()
     {
-        // inicializa variáveis de instância
-        x = 0;
+        
     }
-
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
+    
+    public static void main(String[] args)
     {
-        // escreva seu código aqui
-        return x + y;
+        Circulo c1;
+        double a;
+        double b;
+        double c;
+        Scanner teclado;
+        
+        teclado = new Scanner(System.in);
+        a = teclado.nextDouble();
+        b = teclado.nextDouble();
+        c = teclado.nextDouble();
+        teclado.close();
+        
+        c1 = new Circulo(c);
+        
+        System.out.printf("CIRCULO: %.3f\n", c1.getArea());
     }
 }

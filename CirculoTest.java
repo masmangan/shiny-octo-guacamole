@@ -60,5 +60,19 @@ public class CirculoTest
         Circulo circulo = new Circulo(150.00);
         assertEquals(70685.7750, circulo.getArea(), 0.0001);
     }    
+
+    @Test
+    public void test5()
+    {
+        Circulo circulo = new Circulo(5.2);
+        assertEquals(84.949, circulo.getArea(), 0.001);
+    }
+
+    @Test
+    public void test15()
+    {
+        Circulo circulo = new Circulo(15.2);
+        assertEquals(725.833, circulo.getArea(), 0.001);
+    }
 }
 

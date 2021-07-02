@@ -17,7 +17,7 @@ public class Main1002
         r = teclado.nextDouble();
         teclado.close();
         
-        c1 = new Circulo(teclado.nextDouble());
+        c1 = new Circulo(r);
         
         System.out.printf("A=%.4f\n", c1.getArea());
     }

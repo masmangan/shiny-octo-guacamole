@@ -1,7 +1,7 @@
 
 public class Circulo
 {
-    private double raio;
+    public double raio;
     
     public Circulo(double raio)
     {

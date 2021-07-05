@@ -6,19 +6,31 @@ public class Triangulo
 
     public Triangulo(double base, double altura)
     {
-        // inicializa variáveis de instância
-        x = 0;
+        if (base < 0.0)
+        {
+            throw new IllegalArgumentException();
+        }        
+        if (altura < 0.0)
+        {
+            throw new IllegalArgumentException();
+        } 
+        this.base = base;
+        this.altura = altura;
     }
 
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
+    public double getBase()
     {
-        // escreva seu código aqui
-        return x + y;
+        return base;
     }
+
+    public double getAltura()
+    {
+        return altura;
+    }    
+    
+    public double getArea()
+    {
+        return (base * altura) / 2.0;
+    }    
+    
 }

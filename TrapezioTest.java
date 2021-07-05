@@ -6,17 +6,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * A classe de teste TrianguloTest.
+ * A classe de teste TrapezioTest.
  *
  * @author  (seu nome)
  * @version (um número da versão ou uma data)
  */
-public class TrianguloTest
+public class TrapezioTest
 {
     /**
-     * Construtor default para a classe de teste TrianguloTest
+     * Construtor default para a classe de teste TrapezioTest
      */
-    public TrianguloTest()
+    public TrapezioTest()
     {
     }
 
@@ -39,19 +39,18 @@ public class TrianguloTest
     public void tearDown()
     {
     }
+    
+    @Test
+    public void test3And4And5Dot2()
+    {
+        Trapezio t1 = new Trapezio(3.0, 4.0, 5.2);
+        assertEquals(18.2, t1.getArea(), 0.001);
+    }    
 
     @Test
-    public void test3And5Dot2()
+    public void test12Dot7And10Dot4And15Dot2()
     {
-        Triangulo triangul1 = new Triangulo(3.0, 5.2);
-        assertEquals(7.8, triangul1.getArea(), 0.001);
-    }
-
-    @Test
-    public void test12Dot7And15Dot2()
-    {
-        Triangulo triangul1 = new Triangulo(12.7, 15.2);
-        assertEquals(96.52, triangul1.getArea(), 0.001);
+        Trapezio t1 = new Trapezio(12.7, 10.4, 15.2);
+        assertEquals(175.56, t1.getArea(), 0.001);
     }
 }
-

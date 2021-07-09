@@ -1,5 +1,5 @@
 
-public class Trapezio
+public class Trapezio extends Figura
 {
     private double base1;
     private double base2;
@@ -39,6 +39,7 @@ public class Trapezio
         return altura;
     }    
     
+    @Override    
     public double getArea()
     {
         return ((base1 + base2) / 2.0) * altura;

@@ -1,6 +1,7 @@
 
-public class Circulo
-{
+public class Circulo extends Figura
+{    
+    private static int contador;
     public double raio;
     
     public Circulo(double raio)
@@ -10,6 +11,7 @@ public class Circulo
             throw new IllegalArgumentException();
         }
         this.raio = raio;
+        contador = contador + 1;
     }
 
     public double getRaio()
@@ -17,6 +19,7 @@ public class Circulo
         return this.raio;
     }
     
+    @Override
     public double getArea()
     {
         return 3.14159 * this.raio * this.raio;

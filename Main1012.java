@@ -2,15 +2,14 @@ import java.util.Scanner;
 
 public class Main1012
 {
-    private Main1012()
-    { 
-    }
+ 
     
     public static void main(String[] args)
     {
-        Triangulo t1;
-        Circulo c1;
-        Trapezio tt1;
+        // Triangulo t1;
+        // Circulo c1;
+        // Trapezio tt1;
+        Figura[] fs;
         double a;
         double b;
         double c;
@@ -22,12 +21,23 @@ public class Main1012
         c = teclado.nextDouble();
         teclado.close();
         
-        t1 = new Triangulo(a, c);
-        c1 = new Circulo(c);
-        tt1 = new Trapezio(a, b, c);
+        fs = new Figura[] {
+                 new Triangulo(a, c),
+                 new Circulo(c),
+                 new Trapezio(a, b, c),
+                 new Quadrado(a, b)
+                 // altere aqui
+            };
+        // System.out.printf("TRIANGULO: %.3f\n", t1.getArea());
+        // System.out.printf("CIRCULO: %.3f\n", c1.getArea());
+        // System.out.printf("TRAPEZIO: %.3f\n", tt1.getArea());
         
-        System.out.printf("TRIANGULO: %.3f\n", t1.getArea());
-        System.out.printf("CIRCULO: %.3f\n", c1.getArea());
-        System.out.printf("TRAPEZIO: %.3f\n", tt1.getArea());
+        for (Figura f : fs) {
+            System.out.printf("%s: %.3f\n", f.getClass().getName(), f.getArea());
+        }
     }
 }
+
+
+
+

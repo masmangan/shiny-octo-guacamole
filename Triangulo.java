@@ -1,5 +1,5 @@
 
-public class Triangulo
+public class Triangulo extends Figura
 {
     private double base;
     private double altura;
@@ -28,6 +28,7 @@ public class Triangulo
         return altura;
     }    
     
+    @Override
     public double getArea()
     {
         return (base * altura) / 2.0;
